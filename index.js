@@ -105,7 +105,7 @@ module.exports = function (options) {
         return cb(null, file);
     }, function (cb) {
         //console.log(results);
-        if (results.length > 0) {
+        if (results.length > 0 || options.alwaysCreateReport) {
             writeOutput(options.filePath, reporter(results), cb);
         } else {
             cb();
